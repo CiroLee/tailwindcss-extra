@@ -26,6 +26,14 @@ module.exports = plugin(function ({ addUtilities, matchUtilities }) {
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
     },
+    '.full': {
+      width: '100%',
+      height: '100%',
+    },
+    '.screen': {
+      width: '100vw',
+      height: '100vh',
+    },
   });
   matchUtilities({
     circle: (value) => ({
