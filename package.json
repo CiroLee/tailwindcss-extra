@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-extra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tailwindcss plugin for extra styles",
   "main": "index.js",
   "keywords": [
