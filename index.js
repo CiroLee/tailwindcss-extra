@@ -1,5 +1,5 @@
-const plugin = require('tailwindcss/plugin');
-module.exports = plugin(function ({ addUtilities, matchUtilities }) {
+import plugin from 'tailwindcss/plugin';
+const tailwindcssExtra = plugin(function ({ addUtilities, matchUtilities }) {
   addUtilities({
     '.flex-center': {
       'justify-content': 'center',
@@ -47,3 +47,6 @@ module.exports = plugin(function ({ addUtilities, matchUtilities }) {
     }),
   });
 });
+
+module.exports = tailwindcssExtra;
+export default tailwindcssExtra;
