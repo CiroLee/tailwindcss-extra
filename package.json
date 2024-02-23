@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-extra",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "tailwindcss plugin for extra styles",
   "main": "index.js",
   "keywords": [
@@ -8,6 +8,9 @@
     "plugins",
     "tailwindcss-plugin",
     "tailwindcss-extra"
+  ],
+  "files": [
+    "index.js"
   ],
   "author": "cirolee<ciromail@126.com>",
   "license": "MIT",
