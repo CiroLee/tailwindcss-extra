@@ -2,38 +2,29 @@ import plugin from 'tailwindcss/plugin';
 const tailwindcssExtra = plugin(function ({ addUtilities, matchUtilities }) {
   addUtilities({
     '.flex-center': {
-      'justify-content': 'center',
-      'align-items': 'center',
+      ['@apply items-center justify-center']: {},
     },
     '.absolute-center': {
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
+      ['@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2']: {},
     },
     '.absolute-center-x': {
-      position: 'absolute',
-      left: '50%',
-      transform: 'translateX(-50%)',
+      ['@apply absolute left-1/2 -translate-x-1/2']: {},
     },
     '.absolute-center-y': {
-      position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
-    },
-    '.ellipsis': {
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
+      ['@apply absolute left-1/2 -translate-y-1/2']: {},
     },
     '.full': {
-      width: '100%',
-      height: '100%',
+      ['@apply w-full h-full']: {},
     },
     '.screen': {
-      width: '100vw',
-      height: '100vh',
+      ['@apply w-screen h-screen']: {},
     },
+    '.translate-1\\/2': {
+      ['@apply translate-x-1/2 translate-y-1/2']: {},
+    },
+    '.-translate-1\\/2': {
+      ['@apply -translate-x-1/2 -translate-y-1/2']: {},
+    }
   });
   matchUtilities({
     circle: (value) => ({
@@ -41,10 +32,18 @@ const tailwindcssExtra = plugin(function ({ addUtilities, matchUtilities }) {
       height: value,
       'clip-path': 'circle(closest-side)',
     }),
-    square: (value) => ({
-      width: value,
-      height: value,
-    }),
+    square: (value) => {
+      if (value === 'screen') {
+        return {
+          width: '100vw',
+          height: '100vh',
+        };
+      }
+      return {
+        width: value,
+        height: value,
+      };
+    },
   });
 });
 
