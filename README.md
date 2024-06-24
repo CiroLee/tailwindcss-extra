@@ -36,3 +36,5 @@ complete table of provided classes:
 | screen            | static | set width as `100vw` and height as `100vh`               |
 | circle            | match  | use `clip-path` to make a circle                         |
 | square            | match  | make a square box via setting both width and height      |
+| translate-1/2     | static | translate x and y axis by 1/2                            |
+| -translate-1/2    | static | translate x and y axis by -1/2                           |

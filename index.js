@@ -24,7 +24,7 @@ const tailwindcssExtra = plugin(function ({ addUtilities, matchUtilities }) {
     },
     '.-translate-1\\/2': {
       ['@apply -translate-x-1/2 -translate-y-1/2']: {},
-    }
+    },
   });
   matchUtilities({
     circle: (value) => ({
@@ -32,18 +32,10 @@ const tailwindcssExtra = plugin(function ({ addUtilities, matchUtilities }) {
       height: value,
       'clip-path': 'circle(closest-side)',
     }),
-    square: (value) => {
-      if (value === 'screen') {
-        return {
-          width: '100vw',
-          height: '100vh',
-        };
-      }
-      return {
-        width: value,
-        height: value,
-      };
-    },
+    square: (value) => ({
+      width: value,
+      height: value,
+    }),
   });
 });
 
