@@ -32,8 +32,9 @@ complete table of provided classes:
 | absolute-center   | static | both horizontal and vertical center in absolute position |
 | absolute-center-x | static | horizontal center in absolute position                   |
 | absolute-center-y | static | vertical center in absolute position                     |
-| ellipsis          | static | ellipsis text in a single line                           |
 | full              | static | set width and height as `100%` to its parent             |
 | screen            | static | set width as `100vw` and height as `100vh`               |
 | circle            | match  | use `clip-path` to make a circle                         |
 | square            | match  | make a square box via setting both width and height      |
+| translate-1/2     | static | translate x and y axis by 1/2                            |
+| -translate-1/2    | static | translate x and y axis by -1/2                           |
