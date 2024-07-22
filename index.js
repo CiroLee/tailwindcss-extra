@@ -11,7 +11,7 @@ const tailwindcssExtra = plugin(function ({ addUtilities, matchUtilities }) {
       ['@apply absolute left-1/2 -translate-x-1/2']: {},
     },
     '.absolute-center-y': {
-      ['@apply absolute left-1/2 -translate-y-1/2']: {},
+      ['@apply absolute top-1/2 -translate-y-1/2']: {},
     },
     '.full': {
       ['@apply w-full h-full']: {},
