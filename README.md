@@ -10,7 +10,8 @@ npm install tailwindcss-extra --save-dev
 
 ## Usage
 
-```javascript
+```diff
+# commonjs
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 
@@ -20,7 +21,22 @@ module.exports = {
     extend: {},
   },
 
-  plugins: [require('tailwindcss-extra')],
++ plugins: [require('tailwindcss-extra')],
+};
+```
+
+```diff
+# es module
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
++ import tailwindcssExtra from 'tailwindcss-extra';
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {},
+  },
+
++ plugins: [tailwindcssExtra],
 };
 ```
 
